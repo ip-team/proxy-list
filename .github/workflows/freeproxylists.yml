@@ -10,11 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Drivers
-      run: |
-        sudo apt install vainfo
-        sudo apt install vdpauinfo
-        vainfo
-        vdpauinfo
+      run: sudo apt install intel-media-va-driver-non-free
 
     - name: Install chromium
       run: sudo apt install chromium-browser
