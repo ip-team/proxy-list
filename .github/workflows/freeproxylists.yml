@@ -13,4 +13,4 @@ jobs:
       run: sudo apt install chromium-browser
 
     - name: Dump webpage
-      run: chromium --headless --ignore-gpu-blacklist --ignore-gpu-blocklist --use-gl=desktop --enable-accelerated-video-decode --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy_list.html
+      run: chromium --headless --ignore-gpu-blocklist --use-gl=desktop --enable-accelerated-video-decode --enable-features=VaapiVideoDecoder --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy_list.html
