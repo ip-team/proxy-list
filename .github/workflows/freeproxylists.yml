@@ -1,9 +1,9 @@
 name: Dump freeproxylists.net
 
-# on:
-#  schedule:
-#    - cron:  '15 3 * * *'
-on: [workflow_dispatch]
+# on: [workflow_dispatch]
+on:
+  schedule:
+    - cron:  '15 3 * * *'
 
 jobs:
   build:
