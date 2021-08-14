@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Drivers
-      run: sudo apt install intel-media-va-driver-non-free
+      run: sudo apt install mesa-va-drivers libva-drm2 libva-x11-2
 
     - name: Install chromium
       run: sudo apt install chromium-browser
