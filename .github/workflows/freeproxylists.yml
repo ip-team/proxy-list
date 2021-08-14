@@ -13,12 +13,12 @@ jobs:
       run: sudo apt install chromium-browser
 
     - name: Dump webpage
-      run: chromium --headless --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy_list.html
+      run: chromium --headless --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy-list.html
 
     - name: Publish proxy list
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add proxy_list.html
+        git add proxy-list.html
         git commit --allow-empty -m "CI: Proxy list"
         git push
