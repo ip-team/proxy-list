@@ -13,6 +13,4 @@ jobs:
       run: sudo apt install chromium-browser
 
     - name: Dump webpage
-      run: |
-        sudo chmod -R 777 /run/user
-        chromium --headless --disable-gpu-sandbox --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy_list.html
+      run: chromium --headless --use-gl=desktop --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy_list.html
