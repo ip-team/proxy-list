@@ -1,9 +1,9 @@
 name: Dump freeproxylists.net
 
-#on: [workflow_dispatch]
-on:
-  schedule:
-    - cron:  '15 3 * * *'
+on: [workflow_dispatch]
+#on:
+#  schedule:
+#    - cron:  '15 3 * * *'
 
 jobs:
   build:
@@ -11,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install chromium
-      run: sudo apt install chromium-browser
+#    - name: Install chromium
+#      run: sudo apt install chromium-browser
 
     - name: Dump webpage
       run: sudo chromium --headless --no-sandbox --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy-list.html
