@@ -18,7 +18,7 @@ jobs:
       run: sudo chmod -R 777 /run/user
 
     - name: Dump webpage
-      run: sudo chromium --headless --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy-list.html
+      run: sudo chromium --headless --no-sandbox --lang=en --dump-dom "http://www.freeproxylists.net/?pr=HTTPS&s=u" > proxy-list.html
 
     - name: Publish proxy list
       run: |
